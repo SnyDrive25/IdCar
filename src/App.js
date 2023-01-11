@@ -2,6 +2,7 @@ import Connect from "./components/Connect/Connect";
 import logo from './images/logo.png';
 
 function App() {
+  // main page
   return (
     <div className="App" onLoad={window.scrollTo(0, 0)}>
       <div className="nav"></div>
