@@ -1,0 +1,407 @@
+:root {
+  --dark: rgb(28, 28, 28);
+  --black: rgb(0, 0, 0);
+  --main: rgb(200, 75, 61);
+  --medium: rgb(57, 62, 70);
+  --glow-color: rgb(238, 238, 238);
+}
+
+::-moz-selection {
+  background: var(--main);
+  color: var(--dark);
+}
+
+::selection {
+  background: var(--main);
+  color: var(--dark);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--dark);
+  overflow-x: hidden;
+}
+
+.link {
+  color: var(--medium);
+  text-decoration: underline;
+  transition: all.4s;
+}
+
+.link:hover {
+  color: var(--main);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  background-color: var(--black);
+  user-select: all;
+  padding: 4px;
+  font-size: 1em !important;
+  color: var(--main);
+  text-decoration: none;
+}
+
+.connect {
+  width: 100%;
+  height: 2em;
+  margin-bottom: 50px;
+}
+
+.large {
+  width: calc(98% - 100px) !important;
+  margin: 50px !important;
+}
+
+.space {
+  margin-top: 50px !important;
+}
+
+input,
+select,
+option {
+  padding: 9px;
+  background-color: var(--dark);
+  border: 2px solid var(--main);
+  color: var(--main);
+  text-decoration: none;
+  outline: none;
+  height: fit-content;
+  text-align: center;
+  transition: all.4s;
+}
+
+input[type=number] {
+  appearance: textfield;
+}
+
+input:focus {
+  background-color: transparent;
+}
+
+.sp-space {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.block {
+  text-align: left;
+  display: block !important;
+}
+
+.logo {
+  height: 9em;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  user-select: none;
+  pointer-events: none;
+}
+
+.w250,
+.w500 {
+  padding: 0;
+  font-size: 2em !important;
+  margin: 0;
+}
+
+.big-font {
+  font-size: 2em !important;
+}
+
+.App {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2 {
+  font-weight: bold;
+  text-align: center;
+  filter: drop-shadow(0px 4px 0px var(--black));
+}
+
+@media only screen and (max-width: 1000px) {
+  .title_block {
+    top: 0vh;
+    background-color: transparent;
+  }
+
+  .w250 {
+    width: 300px;
+  }
+
+  .w500 {
+    width: 300px;
+  }
+
+  .nav {
+    border-bottom: 2px solid transparent;
+    margin-top: 7vh;
+  }
+
+  .notel {
+    display: none !important;
+  }
+
+  .part {
+    filter: grayscale(0);
+    opacity: 1;
+  }
+
+  .carte {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1001px) {
+  .title_block {
+    top: 1vh;
+    text-align: center;
+    background-color: var(--dark);
+  }
+
+  .w250 {
+    width: 400px;
+  }
+
+  .w500 {
+    width: 850px;
+  }
+
+  .nav {
+    margin-top: 2.7vh;
+    border-bottom: 2px solid var(--main);
+  }
+
+  .heart:hover {
+    cursor: crosshair;
+    font-size: 1.7em;
+    color: var(--main);
+  }
+
+  .carte {
+    background-attachment: fixed;
+  }
+
+  .carte:hover {
+    background-color: rgb(0, 0, 0, .8);
+    cursor: pointer;
+  }
+
+  .carte:hover .button {
+    cursor: pointer;
+  }
+
+  .part {
+    filter: grayscale(1);
+    opacity: .7;
+  }
+
+  .part:hover {
+    filter: grayscale(0);
+    backdrop-filter: blur(4px) brightness(1.7) saturate(0);
+    opacity: 1;
+  }
+
+  .carte {
+    width: calc(100%/3);
+  }
+}
+
+.title_block {
+  position: absolute;
+  left: calc(50vw - 75px);
+  width: 150px;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 250px;
+  z-index: 2;
+}
+
+.nav {
+  width: 98vw;
+  height: 3.3em;
+  padding-bottom: .5vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15vh;
+}
+
+.nav a {
+  font-weight: bold;
+  font-size: 2em;
+  color: var(--medium);
+}
+
+.footer {
+  width: 100%;
+  height: fit-content;
+  min-height: 200px;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  text-align: center;
+  padding: 0;
+  background-color: rgb(0, 0, 0, .4);
+}
+
+.footer p {
+  padding: 50px;
+  text-align: center;
+  color: var(--medium);
+}
+
+.heart {
+  transition: all.4s;
+}
+
+.left {
+  z-index: 3;
+  margin-left: 1%;
+  float: left;
+}
+
+.right {
+  z-index: 3;
+  margin-right: 1%;
+  float: right;
+}
+
+h1 {
+  font-size: 3em;
+  color: var(--main);
+}
+
+h2 {
+  font-size: 2em;
+  color: var(--medium);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p {
+  font-size: 1.5em;
+  text-align: center;
+  color: var(--medium);
+}
+
+.login {
+  width: 90%;
+  max-width: 40rem;
+  padding: 3rem;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.button {
+  font-size: 1.2em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 9px;
+  background-color: rgb(28, 28, 28, .8);
+  border: 2px solid var(--main);
+  color: var(--main);
+  box-shadow: 0px 0px 25px var(--black);
+  transition: all.3s;
+}
+
+.button:hover {
+  box-shadow: 0px 0px 20px var(--main);
+  background-color: var(--main);
+  color: var(--dark);
+  cursor: pointer;
+}
+
+.big-div {
+  display: grid;
+  width: 100%;
+  height: fit-content;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.div {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  display: inline-flex;
+  width: 100%;
+}
+
+#flex {
+  display: inline-flex;
+  width: 100%;
+  transition: all.4s;
+}
+
+.cartes {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  height: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.carte {
+  min-height: 600px;
+  height: fit-content;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(0, 0, 0, .7);
+  box-shadow: 0 0 .4em var(--main);
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-position: center;
+  text-align: center;
+  transition: all .4s;
+}
+
+.part {
+  width: 90%;
+  height: fit-content;
+  padding: 1%;
+  box-shadow: 0em 0em .8em var(--main);
+  background-color: rgb(0, 0, 0, .4);
+  border-radius: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  transition: all .4s;
+}
+
+#c-left {
+  background-image: url("./images/partner.jpeg");
+  float: left;
+}
+
+#c-center {
+  background-image: url("./images/clients.jpeg");
+  float: left;
+}
+
+#c-right {
+  background-image: url("./images/garage.png");
+  float: right;
+}
